@@ -4,6 +4,21 @@ import { Layer } from './Layer/index.js'
 
 console.log('funguju!');
 
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
 const btn = document.querySelector(".nav-btn");
 
 const navigace = document.querySelector(".nav")
@@ -41,7 +56,7 @@ objednavka.addEventListener('click', (event) => {
 })
 
 const drinkInfo = document.querySelector(".drink__info")
-drinkInfo.innerHTML += Layer({
+/* drinkInfo.innerHTML += Layer({
   color: '#feeeca',
   label: 'mléčná pěna',
 })
@@ -52,4 +67,8 @@ drinkInfo.innerHTML += Layer({
 drinkInfo.innerHTML += Layer({
   color: '#613916',
   label: 'espresso',
+}) */
+
+layers.forEach((layer) => {
+  drinkInfo.innerHTML += Layer(layer) 
 })
