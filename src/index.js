@@ -1,5 +1,6 @@
 import './index.html';
 import './style.css';
+import { Layer } from './Layer/index.js'
 
 console.log('funguju!');
 
@@ -37,4 +38,18 @@ objednavka.addEventListener('click', (event) => {
   hrnecek.className = "drink__cup"
   orderBtn.textContent= "Objednat"
 }
+})
+
+const drinkInfo = document.querySelector(".drink__info")
+drinkInfo.innerHTML += Layer({
+  color: '#feeeca',
+  label: 'mléčná pěna',
+})
+drinkInfo.innerHTML += Layer({
+  color: '#fed7b0',
+  label: 'teplé mléko',
+})
+drinkInfo.innerHTML += Layer({
+  color: '#613916',
+  label: 'espresso',
 })
