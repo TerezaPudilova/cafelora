@@ -9,5 +9,5 @@ export const Layer = (props) => {
                    ></div>
                    <div class="layer__label">${props.label}</div>
        </div>
-  `
- } 
+  `;
+};

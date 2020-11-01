@@ -72,3 +72,21 @@ drinkInfo.innerHTML += Layer({
 layers.forEach((layer) => {
   drinkInfo.innerHTML += Layer(layer) 
 })
+
+const Drink = (props) => {
+  return `
+  <div class="drink">
+  <div class="drink__product">
+    <div class="drink__cup">
+      <img src="/assets/cups/cappuccino.png" />
+    </div>
+    <div class="drink__info">
+      <h3>${props.name}</h3>
+    </div>
+  </div>
+  <div class="drink__controls">
+    <button class="order-btn">Objednat</button>
+  </div>
+</div>
+  `
+}
